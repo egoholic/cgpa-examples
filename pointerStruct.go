@@ -31,4 +31,9 @@ func main() {
 	fmt.Println(s2.Name)
 	fmt.Println(s1)
 	fmt.Println(s2)
+
+	pS := new(myStructure)
+	fmt.Println("pS:", pS)
+	sP := new([]myStructure)
+	fmt.Println("sP:", sP)
 }
