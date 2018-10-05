@@ -54,4 +54,12 @@ func main() {
 	default:
 		fmt.Println("Something else!")
 	}
+
+	var aType error = nil
+	switch aType.(type) {
+	case nil:
+		fmt.Println("It is nil interface!")
+	default:
+		fmt.Println("Not nil interface!")
+	}
 }
