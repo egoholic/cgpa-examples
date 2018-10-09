@@ -35,6 +35,7 @@ func myHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("Host: %s Path: %s\n", r.Host, r.URL.Path)
 	myT := template.Must(template.ParseGlob(tFile))
 	myT.ExecuteTemplate(w, tFile, DATA)
+	myT.Execute(os.Stdout, DATA)
 }
 
 func main() {
