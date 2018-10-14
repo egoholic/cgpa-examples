@@ -47,4 +47,11 @@ func main() {
 	} else {
 		fmt.Println("OK!")
 	}
+
+	w.Done()
+	if timeout(&w, duration) {
+		fmt.Println("Timed out!")
+	} else {
+		fmt.Println("OK!")
+	}
 }
